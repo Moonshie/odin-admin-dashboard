@@ -11,13 +11,18 @@ body {
   grid-template-rows: 175px 1fr;
   grid-template-areas:
     "sidebar header"
-    "sidebar main-area"
+    "sidebar main-area";
+  font-family: Roboto, sans-serif;
 }
 
 .sidebar {
   grid-area: sidebar;
   background-color: var(--secondary-color)
 }
+.sidebar > .navigation {
+  color: white;
+}
+
 .header {
   grid-area: header;
   background-color: var(--main-color);
