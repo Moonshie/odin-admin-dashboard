@@ -73,7 +73,32 @@ body {
 .header {
   grid-area: header;
   background-color: var(--main-color);
+  display: grid;
+  grid-template-columns: minmax(200px, 2fr) minmax(200px, 1fr);
+  grid-template-rows: 40% 60%;
+  grid-template-areas: 
+    "searchbar account"
+    "welcome buttons";
+  padding: 10px 30px;
 }
+.header > .searchbar {
+  grid-area: searchbar;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.header > .searchbar > label {
+  height: 35px;
+}
+.header > .searchbar > #search {
+  width: 70%;
+  height: 24px;
+  background-color: var(--tertiary-color);
+  color: white;
+  font-size: 22px;
+  border-radius: 10px;
+}
+
 
 .main-area {
   grid-area: main-area;
