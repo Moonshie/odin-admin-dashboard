@@ -65,6 +65,10 @@ body {
   border-left: 4px solid var(--accent-color);
   padding-left: 18.5px;
 }
+.sidebar > .navigation > a:focus {
+  border-left: 4px solid var(--accent-color);
+  padding-left: 18.5px;
+}
 
 .header {
   grid-area: header;
