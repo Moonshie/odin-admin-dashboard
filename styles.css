@@ -1,7 +1,14 @@
+:root {
+  --main-color: #F9DBBB;
+  --accent-color: #FF0303;
+  --secondary-color: #4E6E81;
+  --tertiary-color: #2E3840;
+}
+
 body {
   display: grid;
-  grid-template-columns: 300px 1fr;
-  grid-template-rows: 200px 1fr;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 175px 1fr;
   grid-template-areas:
     "sidebar header"
     "sidebar main-area"
@@ -9,21 +16,29 @@ body {
 
 .sidebar {
   grid-area: sidebar;
+  background-color: var(--secondary-color)
 }
 .header {
   grid-area: header;
+  background-color: var(--main-color);
 }
 
 .main-area {
   grid-area: main-area;
   display: grid;
   grid-template-columns: clamp(300px, 600px, 75%) minmax(300px, 25%);
+  grid-auto-rows: 200px;
   grid-template-areas:
-    "projects-area side-area"
+    "projects-area side-area";
+  background-color: var(--tertiary-color);
 }
 .main-area > .projects-area {
   grid-area: projects-area;
 }
 .main-area > .side-area {
   grid-area: side-area;
+}
+
+.main-area > .projects-area > .project {
+  color: var(--accent-color)
 }
