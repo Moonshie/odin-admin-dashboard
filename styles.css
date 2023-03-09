@@ -1,0 +1,29 @@
+body {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 200px 1fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main-area"
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+.header {
+  grid-area: header;
+}
+
+.main-area {
+  grid-area: main-area;
+  display: grid;
+  grid-template-columns: clamp(300px, 600px, 75%) minmax(300px, 25%);
+  grid-template-areas:
+    "projects-area side-area"
+}
+.main-area > .projects-area {
+  grid-area: projects-area;
+}
+.main-area > .side-area {
+  grid-area: side-area;
+}
