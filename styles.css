@@ -13,6 +13,7 @@ a:hover {
   box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
 }
 
+
 body {
   display: grid;
   grid-template-columns: 250px 1fr;
@@ -40,6 +41,8 @@ body {
   letter-spacing: 1px;
 }
 .sidebar > .navigation {
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
