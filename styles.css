@@ -29,9 +29,9 @@ body {
 
 .sidebar {
   grid-area: sidebar;
-
   background-color: var(--secondary-color);
   color: white;
+  box-shadow: 0px 5px 5px black;
 }
 .sidebar > .logo {
   display: flex;
@@ -80,6 +80,8 @@ body {
     "searchbar account"
     "welcome buttons";
   padding: 10px 30px;
+  box-shadow: 3px 5px 3px black;
+  z-index: 1;
 }
 .header > .searchbar {
   grid-area: searchbar;
@@ -148,15 +150,17 @@ body {
   grid-area: main-area;
   display: grid;
   grid-template-columns: minmax(300px, 3fr) minmax(200px, 1fr);
+  grid-template-rows: 75px;
   grid-auto-rows: 1fr;
   grid-template-areas:
+    "name name"
     "projects-area side-area";
   background-color: var(--tertiary-color);
 }
 
 .main-area > .projects-area {
   grid-area: projects-area;
-  padding: 5%;
+  padding: 0px clamp(15px, 5%, 45px);
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
@@ -171,10 +175,10 @@ body {
   flex-direction: column;
   padding: 10px;
   box-sizing: border-box;
-
+  box-shadow: 3px 5px 3px black;
 }
 .main-area > .projects-area > .project:hover {
-  box-shadow: inset 5px 0px 0px var(--accent-color)
+  border-left: 4px solid var(--accent-color)
 }
 .main-area > .projects-area > .project > .name {
   font-size: 18px;
@@ -198,4 +202,17 @@ body {
 
 .main-area > .side-area {
   grid-area: side-area;
+  display: flex;
+  flex-direction: column;
+}
+
+.area-name {
+  color: white;
+  font-size: 22px;
+  margin-top: auto;
+  margin-bottom: 10px;
+  margin-left: clamp(15px, 5%, 45px)
+}
+.secondary {
+  margin-top: 50px;
 }
