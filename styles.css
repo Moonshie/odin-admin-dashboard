@@ -17,7 +17,7 @@ body {
   margin: 0;
   display: grid;
   grid-template-columns: 225px 1fr;
-  grid-template-rows: 175px 1fr;
+  grid-template-rows: 200px 1fr;
   grid-template-areas:
     "sidebar header"
     "sidebar main-area";
@@ -85,7 +85,7 @@ body {
   grid-area: searchbar;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 15px;
 }
 .header > .searchbar > label {
   height: 35px;
@@ -98,7 +98,51 @@ body {
   font-size: 22px;
   border-radius: 10px;
 }
-
+.header > .account {
+  grid-area: account;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 15px;
+}
+.header img {
+  border-radius: 50%;
+}
+.header > .account > .name {
+  font-size: 18px;
+  font-weight: bold;
+}
+.header > .welcome {
+  grid-area: welcome;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.header > .welcome > .greeting > #name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.header > .buttons {
+  grid-area: buttons;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 15px;
+}
+.header > .buttons > .button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  background-color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 16px;
+}
+.header > .buttons > .button:active {
+  transform: scale(0.95);
+}
 
 .main-area {
   grid-area: main-area;
