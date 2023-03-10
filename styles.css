@@ -31,7 +31,6 @@ body {
   grid-area: sidebar;
   background-color: var(--secondary-color);
   color: white;
-  box-shadow: 0px 5px 5px black;
 }
 .sidebar > .logo {
   display: flex;
@@ -80,7 +79,7 @@ body {
     "searchbar account"
     "welcome buttons";
   padding: 10px 30px;
-  box-shadow: 3px 5px 3px black;
+  box-shadow: 3px 3px 3px black;
   z-index: 1;
 }
 .header > .searchbar {
@@ -175,7 +174,7 @@ body {
   flex-direction: column;
   padding: 10px;
   box-sizing: border-box;
-  box-shadow: 3px 5px 3px black;
+  box-shadow: 1px 3px 3px black;
 }
 .main-area > .projects-area > .project:hover {
   border-left: 4px solid var(--accent-color)
